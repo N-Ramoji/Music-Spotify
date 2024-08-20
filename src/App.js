@@ -48,7 +48,7 @@ const App = () => {
       setSelectedSong(filteredSongs[0]);
       setCurrentIndex(0);
     }
-  }, [filteredSongs]);
+  }, [filteredSongs],selectedSong);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
