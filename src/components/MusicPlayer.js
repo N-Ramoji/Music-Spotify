@@ -95,15 +95,15 @@ const MusicPlayer = ({ selectedSong, onPrevious, onNext }) => {
     setIsMuted(newVolume === 0);
   };
 
-  const toggleMute = () => {
-    if (isMuted) {
-      audioRef.current.volume = volume;
-      setIsMuted(false);
-    } else {
-      audioRef.current.volume = 0;
-      setIsMuted(true);
-    }
-  };
+  // const toggleMute = () => {
+  //   if (isMuted) {
+  //     audioRef.current.volume = volume;
+  //     setIsMuted(false);
+  //   } else {
+  //     audioRef.current.volume = 0;
+  //     setIsMuted(true);
+  //   }
+  // };
 
   const toggleVolumeBarVisibility = () => {
     setIsVolumeBarVisible(!isVolumeBarVisible);
