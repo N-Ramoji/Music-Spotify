@@ -71,7 +71,7 @@ const MusicPlayer = ({ selectedSong, onPrevious, onNext }) => {
       audio.addEventListener('timeupdate', updateProgress);
       return () => audio.removeEventListener('timeupdate', updateProgress);
     }
-  }, );
+  }, [audioRef.current]);
 
   const togglePlayPause = () => {
     if (isPlaying) {
@@ -95,15 +95,15 @@ const MusicPlayer = ({ selectedSong, onPrevious, onNext }) => {
     setIsMuted(newVolume === 0);
   };
 
-  // const toggleMute = () => {
-  //   if (isMuted) {
-  //     audioRef.current.volume = volume;
-  //     setIsMuted(false);
-  //   } else {
-  //     audioRef.current.volume = 0;
-  //     setIsMuted(true);
-  //   }
-  // };
+  const toggleMute = () => {
+    if (isMuted) {
+      audioRef.current.volume = volume;
+      setIsMuted(false);
+    } else {
+      audioRef.current.volume = 0;
+      setIsMuted(true);
+    }
+  };
 
   const toggleVolumeBarVisibility = () => {
     setIsVolumeBarVisible(!isVolumeBarVisible);
