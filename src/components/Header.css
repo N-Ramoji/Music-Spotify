@@ -1,0 +1,46 @@
+.logo{
+        position: relative;
+        /* top: 10px;   Adjust for desired vertical positioning */
+        /* left: 40px;  Adjust for desired horizontal positioning */
+        display: flex;
+        
+        align-items:flex-start;  
+        /* flex-direction: column; */
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.top-left-image {
+    background-color: white;
+    /* position: absolute; */
+    top: 5px;
+    left: 10px;
+    width: 50px;  /* Adjust size as needed */
+    height: 50px;  /* Maintain aspect ratio */
+    /* margin: 10px;  Optional: add margin */
+    border-radius: 30px;
+  }
+  
+  .spotify-name {
+    font-size: 24px;
+    color: aliceblue;  /* Adjust size as needed */
+    /* font-weight: bold; */
+    /* color: #1DB954;  Spotify green color */
+    padding-top: 4px;
+    font-size: 30px;
+    padding-left: 5px;
+  }
+  .account-symbol {
+    position: fixed;
+    bottom: 15px;  /* Position from the bottom of the logo container */
+    left: 30px;
+    width:30px;    /* Position from the left of the logo container */
+    font-size: 20px; /* Adjust icon size as needed */
+    color: aliceblue; /* Adjust color as needed */
+    cursor: pointer;
+}
+
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');

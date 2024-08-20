@@ -1,0 +1,189 @@
+.music-player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.info-and-image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.song-info {
+  margin-right: 20px; /* Space between text and album image */
+  text-align: left;
+  width:300px !important;
+  margin-bottom: 10px;
+  align-self: left; /* Align text to the left */
+  align-self: flex-start;
+  padding-left: 79px; /* Shift the text container to the left */
+}
+/* Adjusted album art size */
+.album-art {
+  width: 350px !important;
+  height: 350px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.song-info-overlay {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: white;
+}
+
+.song-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.song-artist {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 67%;
+  align-items: center;
+  margin-top: 10px; /* Add margin to move buttons below the seek bar */
+  padding: 0 20px;
+}
+
+.control-icon {
+  font-size: 24px;
+  color: white;
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.play-pause-icon {
+  font-size: 20px; /* Larger size for the play/pause button */
+  color: white;
+  cursor: pointer;
+  /* padding: 10px; */
+  position: relative;
+}
+
+.seek-bar {
+  width: 350px;
+  margin-top: 10px;
+  appearance: none;
+  background: #0a0404;
+  height: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.seek-bar::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #464545;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 7px;
+  height: 5px;
+  background: #f1f3f5;
+  border-radius: 30%;
+  cursor: pointer;
+}
+/* Sound Buttons Styling */
+.control-icon {
+  font-size: 24px;
+  color: white; /* Changed to white color */
+  /* margin-right: 15px; */
+  cursor: pointer;
+  position: relative;
+}
+
+.play-pause-icon {
+  font-size: 32px; /* Larger size for the play/pause button */
+  color: white; /* Changed to white color */
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+
+/* .album-art-container {
+  position: relative;
+  width: 300px; 
+  height: 300px;
+  margin-bottom: 20px;
+} */
+
+/* .album-art {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+} */
+
+.song-info-overlay {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add a background for better text readability */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.song-title {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.song-artist {
+  font-size: 14px;
+  margin: 0;
+}
+.volume-bar {
+  width: 150px;
+  margin-top: 10px;
+  appearance: none;
+  background: #efeaea;
+  height: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.volume-bar::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #444;
+}
+
+.volume-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 7px;
+  height: 5px;
+  background: #fff; /* White color for the thumb */
+  border-radius: 30%;
+  cursor: pointer;
+}
+.control-icon:active::before,
+.play-pause-icon:active::before {
+  content: ''; /* Creates a pseudo-element */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5); /* White circle with some transparency */
+  z-index: -1; /* Place the circle behind the icon */
+}

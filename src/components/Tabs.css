@@ -1,0 +1,36 @@
+.tabs {
+    display: flex;
+    justify-content: center; /* Center the tabs horizontally */
+    margin-bottom: 10px; /* Add space below the tabs */
+    border-bottom: 1px solid transparent; /* Remove default border */
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 5px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+  }
+  
+  .tab-button:not(:last-child) {
+    margin-right: 20px; /* Add space between the tabs */
+  }
+  
+  .tab-button.active {
+    font-weight: bold;
+  }
+  
+  .tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: white;
+  }
+  
