@@ -71,7 +71,7 @@ const MusicPlayer = ({ selectedSong, onPrevious, onNext }) => {
       audio.addEventListener('timeupdate', updateProgress);
       return () => audio.removeEventListener('timeupdate', updateProgress);
     }
-  }, [audioRef.current]);
+  }, );
 
   const togglePlayPause = () => {
     if (isPlaying) {
